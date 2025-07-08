@@ -122,6 +122,11 @@ public class home extends javax.swing.JFrame {
         btnProduct.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
         btnProduct.setText("New Product");
+        btnProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 720, -1, -1));
 
         btnViewEditDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -169,6 +174,12 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         new manageCategory().setVisible(true);
     }//GEN-LAST:event_btnCategoryActionPerformed
+
+    private void btnProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductActionPerformed
+        // TODO add your handling code here:
+        
+        new addNewProduct().setVisible(true);
+    }//GEN-LAST:event_btnProductActionPerformed
 
     /**
      * @param args the command line arguments
