@@ -17,11 +17,13 @@ public class tables {
             String adminDetails = "insert into user(name,email,mobileNumber,address,password,securityQuestion,answer,status) values('Admin','admin@gmail.com','1234567890','AAA','admin1234','What is the Role of Admin?','ADMINadmin','true')";
             String categoryTable = "create table category(id int AUTO_INCREMENT primary key,name varchar(200))";
             String productTable = "create table product(id int AUTO_INCREMENT primary key,name varchar(200),category varchar(200),price varchar(10))";
+            String billTable = "create table bill(id int primary key,name varchar(200),mobileNumber varchar(200),email varchar(200),date varchar(50),total varchar(10),createdBy varchar(200))";
             
             DbOperations.setDataorDelete(userTable, "User Table Create Successfully");
             DbOperations.setDataorDelete(adminDetails, "Admin Details Added successfully");
             DbOperations.setDataorDelete(categoryTable, "Category Table Created successfully");
             DbOperations.setDataorDelete(productTable, "Product Table Created successfully");
+            DbOperations.setDataorDelete(billTable, "Bill Table Created successfully");
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
