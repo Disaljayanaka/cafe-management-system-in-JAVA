@@ -31,7 +31,7 @@ public class BillDao {
     }
     
     public static void save(Bill bill){
-        String query = "insert into bill values('"+bill.getId()+"','"+bill.getName()+"','"+bill.getMobileNumber()+"','"+bill.getEmail()+"','"+bill.getDate()+"','"+bill.getTotal()+"','"+bill.getCreatedBy()+"')";
+        String query = "insert into bill(id,name,mobileNumber,email,date,total,createdBy) values('"+bill.getId()+"','"+bill.getName()+"','"+bill.getMobileNumber()+"','"+bill.getEmail()+"','"+bill.getDate()+"','"+bill.getTotal()+"','"+bill.getCreatedBy()+"')";
         DbOperations.setDataorDelete(query, "Bill Details Added Successfully");
     }
     

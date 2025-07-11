@@ -498,6 +498,8 @@ public class placeOrder extends javax.swing.JFrame {
         bill.setTotal(total);
         bill.setCreatedBy(createdBy);
         
+        BillDao.save(bill);
+        
         //creating document
         String path = "C:\\Users\\damik\\Downloads\\Disal\\java\\";
         com.itextpdf.text.Document doc = new com.itextpdf.text.Document();
