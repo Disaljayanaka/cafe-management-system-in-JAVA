@@ -505,10 +505,10 @@ public class placeOrder extends javax.swing.JFrame {
             PdfWriter.getInstance(doc, new FileOutputStream(path + "" + billId +".pdf"));
             
             doc.open();
-            Paragraph cafeName = new Paragraph("          Cafe Management System\n");
+            Paragraph cafeName = new Paragraph("                            Cafe Management System\n");
             doc.add(cafeName);
             
-            Paragraph starLine = new Paragraph("********************************************");
+            Paragraph starLine = new Paragraph("******************************************************************");
             doc.add(starLine);
             
             Paragraph paragrapg3 = new Paragraph("\tBill ID : "+billId+"\nCustomer Name : "+customerName+"Total Paid : "+grandTotal);
@@ -523,9 +523,9 @@ public class placeOrder extends javax.swing.JFrame {
             tb1.addCell("Total");
             for(int i=0; i<jTable2.getRowCount(); i++){
                 String n = jTable2.getValueAt(i, 0).toString();
-                String d = jTable2.getValueAt(i, 0).toString();
-                String r = jTable2.getValueAt(i, 0).toString();
-                String q = jTable2.getValueAt(i, 0).toString();
+                String d = jTable2.getValueAt(i, 1).toString();
+                String r = jTable2.getValueAt(i, 2).toString();
+                String q = jTable2.getValueAt(i, 3).toString();
                 
                 tb1.addCell(n);
                 tb1.addCell(d);
